@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Invest in Real-World Assets | Dubai Properties & US Stocks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary: #0b2240;
+      --accent: #00d4ff;
+      --highlight: #fffa65;
+      --bg: #f8fafd;
+      --white: #fff;
+      --gray: #e5eaf1;
+      --card: #f6fbff;
+      --shadow: 0 8px 32px rgba(0,0,0,0.08);
+      --radius: 1.2rem;
+    }
+    body {
+      background: var(--bg);
+      color: var(--primary);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .hero {
+      background: linear-gradient(120deg, #00d4ff 0%, #0b2240 100%);
+      color: var(--white);
+      padding: 3rem 1rem 2rem 1rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 0.7rem;
+      letter-spacing: 1px;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+    }
+    .cta-btn {
+      background: var(--highlight);
+      color: var(--primary);
+      border: none;
+      border-radius: 2rem;
+      font-size: 1.2rem;
+      padding: 1rem 2.5rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: background 0.2s, color 0.2s;
+      margin-top: 1.5rem;
+    }
+    .cta-btn:hover {
+      background: var(--accent);
+      color: var(--white);
+    }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+    .stat {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      min-width: 180px;
+      margin-bottom: 1rem;
+    }
+    .stat .value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .partnerships {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2.5rem 0 1rem 0;
+      padding: 0 1rem;
+    }
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2rem 1.5rem;
+      width: 350px;
+      max-width: 90vw;
+      transition: transform 0.2s;
+      text-align: left;
+    }
+    .card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 10px 32px rgba(0,0,0,0.18);
+    }
+    .card h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.7rem;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+    }
+    .card ul {
+      padding-left: 1.2rem;
+      font-size: 1.05rem;
+      margin-bottom: 0;
+    }
+    .steps-section {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      max-width: 900px;
+      margin: 3rem auto 2rem auto;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+    .steps-section h3 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .step {
+      flex: 1 1 180px;
+      min-width: 180px;
+      max-width: 220px;
+      background: var(--gray);
+      border-radius: 1rem;
+      padding: 1.5rem 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .step-number {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .step-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .step-desc {
+      font-size: 1rem;
+      color: #444;
+    }
+    .market-section {
+      background: linear-gradient(90deg, #00d4ff 20%, #fffa65 100%);
+      color: var(--primary);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      max-width: 900px;
+      margin: 2rem auto 2rem auto;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+    .market-section h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .market-stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-top: 1.5rem;
+    }
+    .market-stat {
+      min-width: 120px;
+      background: var(--white);
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      padding: 1rem 0.5rem;
+    }
+    .market-stat .market-value {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .market-stat .market-label {
+      font-size: 1rem;
+      color: #444;
+      margin-top: 0.3rem;
+    }
+    .powered-by {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      color: #0b2240;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      color: #bdbdbd;
+      font-size: 0.95rem;
+      background: var(--gray);
+    }
+    @media (max-width: 900px) {
+      .steps, .market-stats, .partnerships, .stats {
+        flex-direction: column;
+        align-items: center;
+      }
+      .steps-section, .market-section {
+        padding: 1rem 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>Dubai’s Property Market & US Stocks: Invest in Real-World Assets</h1>
+    <p>
+      Join the new wave of global investors earning passive income and capital growth through exclusive Dubai property deals and US stock market access. Powered by blockchain, open to everyone.
+    </p>
+    <button class="cta-btn">Get Started in 3 Minutes</button>
+  </section>
+  
+  <div class="stats">
+    <div class="stat">
+      <div class="value">10.1%</div>
+      <div>Avg. Investor Returns (2024)</div>
+    </div>
+    <div class="stat">
+      <div class="value">+55%</div>
+      <div>Dubai Property Value Growth*</div>
+    </div>
+    <div class="stat">
+      <div class="value">6,500+</div>
+      <div>US Stocks & ETFs</div>
+    </div>
+    <div class="stat">
+      <div class="value">3 min</div>
+      <div>Sign Up Time</div>
+    </div>
+  </div>
+
+  <section class="partnerships">
+    <div class="card">
+      <h2>🏢 PropertyPistol: Dubai Real Estate on RWA</h2>
+      <ul>
+        <li>Access exclusive, income-generating Dubai properties</li>
+        <li>Invest from as little as AED 500—full or fractional ownership</li>
+        <li>Earn monthly rental income, paid directly to your wallet</li>
+        <li>Benefit from capital appreciation and flexible share selling</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>📈 Pasiv: Invest in US Stocks</h2>
+      <ul>
+        <li>Trade 6,500+ US stocks and ETFs (NASDAQ & NYSE)</li>
+        <li>Fractional investing and round-up features</li>
+        <li>Fully regulated, US-based custody</li>
+        <li>Transparent pricing, real-time portfolio tracking</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="steps-section">
+    <h3>Create and Manage Your Asset Portfolio from Anywhere</h3>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-title">Browse</div>
+        <div class="step-desc">Explore vetted Dubai properties and US stocks. Sign up in minutes and start browsing global opportunities.</div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-title">Invest</div>
+        <div class="step-desc">Purchase fractions or full ownership of your favorite assets. Start with low minimums and diversify easily.</div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-title">Earn</div>
+        <div class="step-desc">Grow passive income streams from monthly rent or dividends, paid directly to your wallet.</div>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-title">Sell</div>
+        <div class="step-desc">Sell your shares flexibly—realize appreciation on property or trade stocks instantly.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="market-section">
+    <h3>Dubai Leads Global Property Growth</h3>
+    <div>*Savills World Cities Prime Residential Index (Dec 2020 - Dec 2023)</div>
+    <div class="market-stats">
+      <div class="market-stat">
+        <div class="market-value">+55%</div>
+        <div class="market-label">Dubai</div>
+      </div>
+      <div class="market-stat">
+        <div class="market-value">+18%</div>
+        <div class="market-label">Singapore</div>
+      </div>
+      <div class="market-stat">
+        <div class="market-value">+2%</div>
+        <div class="market-label">Sydney</div>
+      </div>
+      <div class="market-stat">
+        <div class="market-value">0%</div>
+        <div class="market-label">London</div>
+      </div>
+      <div class="market-stat">
+        <div class="market-value">-12%</div>
+        <div class="market-label">Paris</div>
+      </div>
+      <div class="market-stat">
+        <div class="market-value">-17%</div>
+        <div class="market-label">Los Angeles</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="powered-by">
+    <strong>Powered by:</strong> PropertyPistol &nbsp; | &nbsp; Pasiv
+  </div>
+
+  <footer>
+    The world is your portfolio. Start building it today.<br>
+    &copy; 2025 RWA Platform. All rights reserved.
+  </footer>
+</body>
+</html>
